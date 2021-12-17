@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
+    "data": "libs/data",
     "marvel": "apps/marvel",
     "marvel-e2e": "apps/marvel-e2e"
   }

@@ -11,7 +11,7 @@ export function Index() {
       <div className="wrapper">
         <div className="container">
           <div id="welcome">
-            <h1>
+            <h1 className="text-center w-[650px]">
               <span> Hello there, </span>
               Welcome marvel 👋
             </h1>
