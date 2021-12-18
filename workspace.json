@@ -2,6 +2,8 @@
   "version": 2,
   "projects": {
     "data": "libs/data",
+    "khiladi": "apps/khiladi",
+    "khiladi-e2e": "apps/khiladi-e2e",
     "marvel": "apps/marvel",
     "marvel-e2e": "apps/marvel-e2e"
   }

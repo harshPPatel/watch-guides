@@ -1,0 +1,28 @@
+{
+  "root": "apps/khiladi-e2e",
+  "sourceRoot": "apps/khiladi-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/khiladi-e2e/cypress.json",
+        "devServerTarget": "khiladi:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "khiladi:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/khiladi-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["khiladi"]
+}
