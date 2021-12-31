@@ -1,4 +1,4 @@
-export interface ReferenceLink {
+export interface IReferenceLink {
   title: string;
   url: string;
 }

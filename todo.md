@@ -1,8 +1,11 @@
 # Khiladi.watchguides.info
 
-- [ ] Add footer
+- [x] Add footer
 - [ ] Refactor the code for Main section
 - [ ] Add search function
+- [ ] Add Share dialogue?
+  - [ ] Make it easier to share the page
+  - [ ] manually create short link
 - [ ] Make website responsive
 - [ ] Make it SEO friendly
 - [ ] Add 404 page if needed (the default page should work just fine)
