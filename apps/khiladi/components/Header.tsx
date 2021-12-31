@@ -10,7 +10,7 @@ interface HeaderProps {
 
 export function Header(props: HeaderProps) {
   return (
-    <div className="bg-hero bg-[#000000DD] bg-cover bg-blend-overlay text-white h-[600px] [clip-path:polygon(0_0,100%_0,100%_75%,0%_100%)]">
+    <div className="bg-hero bg-[#000000DD] bg-cover bg-blend-overlay text-white h-[650px] [clip-path:polygon(0_0,100%_0,100%_75%,0%_100%)]">
       <div className="container mx-auto">
         <nav className="h-24 flex items-center">
           <Link href="/" passHref>
@@ -21,7 +21,7 @@ export function Header(props: HeaderProps) {
           </Link>
           <a
             href="mailto:watchguides@harshpatel.info"
-            className="ml-auto mr-3 text-sm font-thin"
+            className="ml-auto mr-5 text-sm font-thin"
           >
             Submit Suggestion
           </a>
@@ -36,6 +36,7 @@ export function Header(props: HeaderProps) {
         </nav>
 
         <div className="h-16 w-52 flex relative mt-12">
+          {/* TODO: Take the src and alt from props */}
           <Image
             src={KhiladiLogo}
             alt="Khiladi Logo"
@@ -45,9 +46,7 @@ export function Header(props: HeaderProps) {
         </div>
 
         <h1 className="font-light text-5xl my-8 ">{props.title}</h1>
-        <p className="opacity-70 max-w-4xl text-sm leading-6">
-          {props.description}
-        </p>
+        <p className="opacity-70 max-w-3xl leading-6">{props.description}</p>
       </div>
     </div>
   );

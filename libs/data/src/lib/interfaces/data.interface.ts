@@ -1,8 +1,9 @@
+import { IContent } from './content.interface';
 import { ReferenceLink } from './reference-link.interface';
 
-export interface Data {
+export interface IData {
   title: string;
   description: string;
-  content: any[];
+  content: IContent[];
   referenceLinks?: ReferenceLink[];
 }

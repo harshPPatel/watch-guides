@@ -10,6 +10,9 @@ const nextConfig = {
     // See: https://github.com/gregberge/svgr
     svgr: false,
   },
+  images: {
+    domains: ['www.themoviedb.org'],
+  },
 };
 
 module.exports = withNx(nextConfig);
