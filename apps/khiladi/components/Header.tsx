@@ -15,7 +15,7 @@ export function Header(props: HeaderProps) {
         <nav className="h-24 flex items-center">
           <Link href="/" passHref>
             <a className="flex items-center transition-opacity hover:opacity-60 focus:opacity-60">
-              <BookOpenIcon className="h-5 w-5 mr-1.5 text-blue-800" />
+              <BookOpenIcon className="h-5 w-5 mr-1.5" />
               WatchGuides
             </a>
           </Link>

@@ -36,7 +36,7 @@ export function Index(props: IData) {
   };
 
   return (
-    <main className="bg-gray-50">
+    <div className="bg-gray-50">
       <Header title={props.title} description={props.description} />
       <div className="container mx-auto -mt-16">
         <div className="flex items-center justify-end mb-20">
@@ -63,7 +63,7 @@ export function Index(props: IData) {
             {props.content.map((content: IContent) => (
               <li key={content.imdbID}>
                 <div
-                  className="flex items-center shadow-xl border-gray-200 max-w-4xl mx-auto mb-5 bg-white"
+                  className="flex items-center shadow-xl border-gray-200 max-w-4xl mx-auto mb-12 bg-white"
                   tabIndex={0}
                 >
                   <div className="relative h-96 w-1/3">
@@ -162,7 +162,7 @@ export function Index(props: IData) {
           </div>
         </div>
       </div>
-    </main>
+    </div>
   );
 }
 
