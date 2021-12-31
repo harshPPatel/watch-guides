@@ -5,7 +5,7 @@ export interface IContent {
   year: number;
   type: TContentType;
   length: string;
-  revenue: number;
+  revenue?: string;
   releaseDate: string;
   description: string;
   imdbID: string;

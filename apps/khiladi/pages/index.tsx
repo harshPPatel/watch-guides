@@ -62,7 +62,10 @@ export function Index(props: IData) {
           <ul>
             {props.content.map((content: IContent) => (
               <li key={content.imdbID}>
-                <div className="flex items-center shadow-xl border-gray-200 max-w-4xl mx-auto mb-5 bg-white">
+                <div
+                  className="flex items-center shadow-xl border-gray-200 max-w-4xl mx-auto mb-5 bg-white"
+                  tabIndex={0}
+                >
                   <div className="relative h-96 w-1/3">
                     <Image
                       src={content.posterUrl}
@@ -71,7 +74,7 @@ export function Index(props: IData) {
                       objectFit="cover"
                     />
                   </div>
-                  <div className="pl-12 pr-8 w-2/3 ">
+                  <div className="pl-12 pr-8 px-8 w-2/3 ">
                     <ContentTypeTag type={content.type} />
 
                     <h1 className="text-4xl py-5 font-light">
@@ -89,7 +92,7 @@ export function Index(props: IData) {
                         <span className="text-primary opacity-60 h-5 inline-block mr-1.5">
                           <CurrencyDollarIcon className="h-full" />
                         </span>
-                        {content.revenue > 0 ? content.revenue : 'N/A'}
+                        {content.revenue ? `$ ${content.revenue}` : 'N/A'}
                       </p>
                       <p className="flex items-center text-sm font-light">
                         <span className="text-primary opacity-60 h-5 inline-block mr-1.5">
@@ -99,8 +102,10 @@ export function Index(props: IData) {
                       </p>
                     </div>
 
-                    <p className="mt-5 mb-10 font-light text-gray-600">
-                      {content.description}
+                    <p className="mt-5 mb-7 font-light text-gray-600">
+                      {content.description.length > 300
+                        ? content.description.slice(0, 300) + '...'
+                        : content.description}
                     </p>
 
                     <p className="text-sm">
