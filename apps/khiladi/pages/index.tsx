@@ -77,9 +77,9 @@ export function Index(props: IData) {
                   <div className="pl-12 pr-8 px-8 w-2/3 ">
                     <ContentTypeTag type={content.type} />
 
-                    <h1 className="text-4xl py-5 font-light">
+                    <h2 className="text-4xl py-5 font-light">
                       {content.title} ({content.year})
-                    </h1>
+                    </h2>
 
                     <div className="flex items-center">
                       <p className="flex items-center text-sm font-light mr-6">
@@ -115,7 +115,7 @@ export function Index(props: IData) {
                         <a
                           target="_blank"
                           rel="noreferrer"
-                          className="underline hover:opacity-60 transition-opacity mr-6"
+                          className="underline hover:opacity-60 focus:opacity-60 transition-opacity mr-6"
                         >
                           <span className="inline-block h-3 w-8 mr-2">
                             <ImdbLogo />
@@ -127,7 +127,7 @@ export function Index(props: IData) {
                         <a
                           target="_blank"
                           rel="noreferrer"
-                          className="underline hover:opacity-60 transition-opacity"
+                          className="underline hover:opacity-60 focus:opacity-60 transition-opacity"
                         >
                           <span className="inline-block h-3 w-8 mr-2">
                             <TmdbLogo />
@@ -141,6 +141,25 @@ export function Index(props: IData) {
               </li>
             ))}
           </ul>
+
+          <div className="max-w-4xl mx-auto mt-20">
+            <h2 className="text-3xl mb-6">References</h2>
+            <ul className="list-disc list-inside">
+              {props.referenceLinks.map((link) => (
+                <li key={`Reference Link - ${link.title}`} className="mb-1.5">
+                  <Link href={link.url} passHref>
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      className="underline transition-opacity hover:opacity-60 focus:opacity-60"
+                    >
+                      {link.title}
+                    </a>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </main>

@@ -14,14 +14,14 @@ export function Header(props: HeaderProps) {
       <div className="container mx-auto">
         <nav className="h-24 flex items-center">
           <Link href="/" passHref>
-            <a className="flex items-center">
+            <a className="flex items-center transition-opacity hover:opacity-60 focus:opacity-60">
               <BookOpenIcon className="h-5 w-5 mr-1.5 text-blue-800" />
               WatchGuides
             </a>
           </Link>
           <a
-            href="mailto:watchguides@harshpatel.info"
-            className="ml-auto mr-5 text-sm font-thin"
+            href="mailto:support@watchguides.info"
+            className="ml-auto mr-5 text-sm font-thin transition-opacity hover:opacity-60 focus:opacity-60"
           >
             Submit Suggestion
           </a>
@@ -29,7 +29,7 @@ export function Header(props: HeaderProps) {
           {/* TODO: add common share the guide option? Dialogue with short link */}
           <a
             href=""
-            className="text-xs font-thin py-1.5 px-4 bg-primary rounded-sm"
+            className="text-xs font-thin py-1.5 px-4 bg-primary rounded-sm transition-colors hover:bg-primary/70 focus:bg-primary/70"
           >
             Share the Guide
           </a>
