@@ -1,6 +1,5 @@
 import { BookOpenIcon } from '@heroicons/react/outline';
 import { IShortLinks } from '@watch-guides/data';
-import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import { ShareDialogue } from './ShareDialogue';
@@ -52,12 +51,7 @@ export function Header(props: HeaderProps) {
         />
 
         <div className="h-16 w-52 flex relative md:mt-12 mt-5">
-          <Image
-            src={props.logo}
-            alt={`Logo of ${props.title}`}
-            layout="fill"
-            objectFit="contain"
-          />
+          <img src={props.logo.src} alt={`Logo of ${props.title}`} />
         </div>
 
         <h1 className="font-light text-5xl my-8 ">{props.title}</h1>

@@ -4,7 +4,6 @@ import {
   CurrencyDollarIcon,
 } from '@heroicons/react/outline';
 import { IContent } from '@watch-guides/data';
-import Image from 'next/image';
 import Link from 'next/link';
 import { ContentTypeTag } from './ContentTypeTag';
 import { ImdbLogo } from './logos/ImdbLogo';
@@ -34,11 +33,10 @@ export const ContentCard = (props: ContentCardProps) => {
         tabIndex={0}
       >
         <div className="relative h-96 md:w-1/3 w-2/5">
-          <Image
+          <img
             src={props.content.posterUrl}
-            layout="fill"
             alt={`Poster of ${props.content.title}`}
-            objectFit="cover"
+            className="object-cover h-full w-full"
           />
         </div>
         <div className="md:pl-12 px-6 md:pr-8 md:w-2/3 w-3/5">

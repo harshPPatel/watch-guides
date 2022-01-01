@@ -13,6 +13,11 @@ const nextConfig = {
   images: {
     domains: ['www.themoviedb.org'],
   },
+  exportPathMap: async function () {
+    return {
+      '/': { page: '/' },
+    };
+  },
 };
 
 module.exports = withNx(nextConfig);

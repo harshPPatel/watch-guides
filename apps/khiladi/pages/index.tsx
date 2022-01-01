@@ -1,10 +1,11 @@
-import { IContent, IData, KhiladiData } from '@watch-guides/data';
+import { IContent, IData } from '@watch-guides/data';
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
 import { ContentList } from '../components/ContentList';
 import Header from '../components/Header';
 import { ReferenceLinks } from '../components/ReferenceLinks';
 import { SearchBox } from '../components/SearchBox';
+import { KhiladiData } from '../data/khiladi-data';
 import KhiladiSeoImage from '../public/images/khiladi-hero.jpg';
 import KhiladiLogo from '../public/images/khiladi-logo.png';
 
@@ -64,7 +65,7 @@ export function Index(props: IData) {
 
 export async function getStaticProps() {
   return {
-    props: KhiladiData,
+    props: { ...KhiladiData },
   };
 }
 

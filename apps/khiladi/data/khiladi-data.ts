@@ -1,4 +1,4 @@
-import { IData } from './interfaces/data.interface';
+import { IData } from '@watch-guides/data';
 
 export const KhiladiData: IData = {
   title: 'Khiladi Franchise',

@@ -1,5 +1,4 @@
 import { BookOpenIcon } from '@heroicons/react/outline';
-import Image from 'next/image';
 import Link from 'next/link';
 
 interface FooterProps {
@@ -18,12 +17,7 @@ export const Footer = (props: FooterProps) => (
           </a>
         </Link>
         <div className="h-8 w-52 flex relative">
-          <Image
-            src={props.logo}
-            alt={`${props.franchiseTitle} logo`}
-            layout="fill"
-            objectFit="contain"
-          />
+          <img src={props.logo.src} alt={`${props.franchiseTitle} logo`} />
         </div>
         <Link href="mailto:support@watchguides.info" passHref>
           <a className="underline transition-opacity hover:opacity-60 focus:opacity-60 sm:pt-0 pt-5">
