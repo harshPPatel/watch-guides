@@ -8,10 +8,10 @@
   - [x] manually create short link
 - [x] Dark Mode
 - [x] Make website responsive
-- [ ] Make it SEO friendly
+- [x] Make it SEO friendly
 - [-] Add 404 page if needed (the default page should work just fine)
-- [ ] Add favicon (Only favicon)
-- [ ] Remove unnecessary files from the project (like css files)
+- [x] Add favicon (Only favicon)
+- [x] Remove unnecessary files from the project (like css files)
 - [ ] add google analytics
 - [ ] Complete TODOs from Comments
 - After deploy
