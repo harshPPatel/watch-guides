@@ -12,6 +12,7 @@
 - [ ] Add 404 page if needed (the default page should work just fine)
 - [ ] Remove unnecessary files from the project (like css files)
 - [ ] add google analytics
+- [ ] Complete TODOs from Comments
 - After deploy
   - [ ] write a blog with link to this website?
   - [ ] Post the links in relevant reddit threads, Quora or similar sites
