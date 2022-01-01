@@ -8,13 +8,16 @@ import { IContent, IData, KhiladiData } from '@watch-guides/data';
 import {} from '@watch-guides/data';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 import { ContentCard } from '../components/ContentCard';
+import { ContentList } from '../components/ContentList';
 import { ContentTypeTag } from '../components/ContentTypeTag';
 
 import Header from '../components/Header';
 import { ImdbLogo } from '../components/logos/ImdbLogo';
 import { TmdbLogo } from '../components/logos/TmdbLogo';
 import { ReferenceLinks } from '../components/ReferenceLinks';
+import { SearchBox } from '../components/SearchBox';
 
 export function Index(props: IData) {
   /*
@@ -26,38 +29,31 @@ export function Index(props: IData) {
 
   // Keeping this unnecessary code for future reference for other complex watch guides
 
+  const [searchResults, setSearchResults] = useState<IContent[]>([]);
+
+  useEffect(() => {
+    setSearchResults(props.content);
+  }, [props.content]);
+
+  const handleOnInput = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { value } = event.target;
+    const results = props.content.filter((content) =>
+      content.title.toLowerCase().includes(value.toLowerCase())
+    );
+    setSearchResults(results);
+  };
+
   return (
     <div className="bg-gray-50">
       <Header title={props.title} description={props.description} />
       <div className="container mx-auto -mt-16">
         <div className="flex items-center justify-end mb-20">
-          <div className="relative flex items-center">
-            {/* TODO: add search functionality & move to separate component */}
-            <input
-              type="search"
-              name="search"
-              id="search"
-              className="px-5 py-2 border border-gray-300 rounded-md shadow-md peer"
-              placeholder="Search..."
-            />
-            <label
-              htmlFor="search"
-              className="text-gray-400 absolute right-5 z-10 cursor-text peer-focus:text-accent-dark hidden peer-placeholder-shown:block"
-            >
-              <SearchIcon height={20} />
-            </label>
-          </div>
+          <SearchBox onInputHandler={handleOnInput} />
         </div>
 
-        <div>
-          <ul>
-            {props.content.map((content: IContent) => (
-              <ContentCard content={content} key={content.imdbID} />
-            ))}
-          </ul>
+        <ContentList contents={searchResults} />
 
-          <ReferenceLinks referenceLinks={props.referenceLinks} />
-        </div>
+        <ReferenceLinks referenceLinks={props.referenceLinks} />
       </div>
     </div>
   );
