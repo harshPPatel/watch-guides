@@ -33,11 +33,11 @@ export const ShareDialogue = (props: ShareDialogueInterface) => {
       shortLinkRef.current.setSelectionRange(0, 99999);
       navigator.clipboard.writeText(url);
 
-      shortLinkRef.current.classList.add('bg-green-50', 'text-green-900');
+      shortLinkRef.current.classList.add('bg-green-200', 'text-green-900');
       shortLinkRef.current.value = 'Copied to your clipboard!';
       setTimeout(() => {
         shortLinkRef.current.value = url;
-        shortLinkRef.current.classList.remove('bg-green-50', 'text-green-900');
+        shortLinkRef.current.classList.remove('bg-green-200', 'text-green-900');
       }, 1500);
     }
   };
