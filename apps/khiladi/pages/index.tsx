@@ -29,8 +29,8 @@ export function Index(props: IData) {
         shortLinks={props.shortLinks}
         logo={KhiladiLogo}
       />
-      <div className="container mx-auto -mt-16 pb-16">
-        <div className="flex items-center justify-end mb-20">
+      <div className="container px-5 mx-auto md:-mt-16 mt-8 md:pb-16 pb-8">
+        <div className="flex items-center justify-end md:mb-20 mb-10">
           <SearchBox onInputHandler={handleOnInput} />
         </div>
 

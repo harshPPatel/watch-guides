@@ -7,7 +7,7 @@ interface ReferenceLinksProps {
 
 export const ReferenceLinks = (props: ReferenceLinksProps) => {
   return (
-    <div className="max-w-4xl mx-auto mt-20 dark:text-white">
+    <div className="max-w-4xl mx-auto md:mt-20 mt-10 dark:text-white">
       <h2 className="text-3xl mb-6">References</h2>
       <ul className="list-disc list-inside">
         {props.referenceLinks.map((link) => (

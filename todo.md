@@ -7,7 +7,7 @@
   - [x] Make it easier to share the page
   - [x] manually create short link
 - [x] Dark Mode
-- [ ] Make website responsive
+- [x] Make website responsive
 - [ ] Make it SEO friendly
 - [ ] Add 404 page if needed (the default page should work just fine)
 - [ ] Remove unnecessary files from the project (like css files)

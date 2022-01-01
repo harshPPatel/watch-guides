@@ -16,7 +16,7 @@ export function Header(props: HeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="bg-hero bg-[#000000DD] bg-cover bg-blend-overlay text-white h-[650px] [clip-path:polygon(0_0,100%_0,100%_75%,0%_100%)]">
+    <div className="bg-hero px-5 bg-[#000000DD] bg-cover bg-blend-overlay text-white md:h-[650px] pb-10 sm:[clip-path:polygon(0_0,100%_0,100%_75%,0%_100%)]">
       <div className="container mx-auto">
         <nav className="h-24 flex items-center">
           <Link href="/" passHref>
@@ -52,7 +52,7 @@ export function Header(props: HeaderProps) {
           shortLinks={props.shortLinks}
         />
 
-        <div className="h-16 w-52 flex relative mt-12">
+        <div className="h-16 w-52 flex relative md:mt-12 mt-5">
           {/* TODO: Take the src and alt from props */}
           <Image
             src={props.logo}
