@@ -7,7 +7,6 @@ interface SearchBoxProps {
 export const SearchBox = (props: SearchBoxProps) => {
   return (
     <div className="relative flex items-center">
-      {/* TODO: add search functionality & move to separate component */}
       <input
         type="search"
         name="search"

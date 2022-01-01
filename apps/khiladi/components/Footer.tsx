@@ -18,7 +18,6 @@ export const Footer = (props: FooterProps) => (
           </a>
         </Link>
         <div className="h-8 w-52 flex relative">
-          {/* TODO: Take the src and alt from props */}
           <Image
             src={props.logo}
             alt={`${props.franchiseTitle} logo`}

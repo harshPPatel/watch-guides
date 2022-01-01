@@ -32,7 +32,6 @@ export function Header(props: HeaderProps) {
             Submit Suggestion
           </a>
 
-          {/* TODO: add common share the guide option? Dialogue with short link */}
           <a
             href=""
             className="text-xs font-thin py-1.5 px-4 bg-primary rounded-sm transition-colors hover:bg-primary/70 focus:bg-primary/70"
@@ -53,7 +52,6 @@ export function Header(props: HeaderProps) {
         />
 
         <div className="h-16 w-52 flex relative md:mt-12 mt-5">
-          {/* TODO: Take the src and alt from props */}
           <Image
             src={props.logo}
             alt={`Logo of ${props.title}`}
