@@ -3,13 +3,13 @@ import { IShortLinks } from '@watch-guides/data';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-import KhiladiLogo from '../public/images/khiladi-logo.png';
 import { ShareDialogue } from './ShareDialogue';
 
 interface HeaderProps {
   title: string;
   description: string;
   shortLinks: IShortLinks;
+  logo: StaticImageData;
 }
 
 export function Header(props: HeaderProps) {
@@ -55,8 +55,8 @@ export function Header(props: HeaderProps) {
         <div className="h-16 w-52 flex relative mt-12">
           {/* TODO: Take the src and alt from props */}
           <Image
-            src={KhiladiLogo}
-            alt="Khiladi Logo"
+            src={props.logo}
+            alt={`Logo of ${props.title}`}
             layout="fill"
             objectFit="contain"
           />

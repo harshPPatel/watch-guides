@@ -1,9 +1,13 @@
 import { BookOpenIcon } from '@heroicons/react/outline';
-import Link from 'next/link';
 import Image from 'next/image';
-import KhiladiLogo from '../public/images/khiladi-logo.png';
+import Link from 'next/link';
 
-export const Footer = () => (
+interface FooterProps {
+  logo: StaticImageData;
+  franchiseTitle: string;
+}
+
+export const Footer = (props: FooterProps) => (
   <footer className="bg-zinc-900 text-white mt-20 py-8">
     <div className="container mx-auto ">
       <nav className="h-24 flex items-center justify-between">
@@ -16,8 +20,8 @@ export const Footer = () => (
         <div className="h-8 w-52 flex relative">
           {/* TODO: Take the src and alt from props */}
           <Image
-            src={KhiladiLogo}
-            alt="Khiladi Logo"
+            src={props.logo}
+            alt={`${props.franchiseTitle} logo`}
             layout="fill"
             objectFit="contain"
           />

@@ -4,17 +4,9 @@ import { ContentList } from '../components/ContentList';
 import Header from '../components/Header';
 import { ReferenceLinks } from '../components/ReferenceLinks';
 import { SearchBox } from '../components/SearchBox';
+import KhiladiLogo from '../public/images/khiladi-logo.png';
 
 export function Index(props: IData) {
-  /*
-   * Replace the elements below with your own.
-   *
-   * Note: The corresponding styles are in the ./index.scss file.
-   */
-  // console.log(props);
-
-  // Keeping this unnecessary code for future reference for other complex watch guides
-
   const [searchResults, setSearchResults] = useState<IContent[]>([]);
 
   useEffect(() => {
@@ -35,6 +27,7 @@ export function Index(props: IData) {
         title={props.title}
         description={props.description}
         shortLinks={props.shortLinks}
+        logo={KhiladiLogo}
       />
       <div className="container mx-auto -mt-16">
         <div className="flex items-center justify-end mb-20">
