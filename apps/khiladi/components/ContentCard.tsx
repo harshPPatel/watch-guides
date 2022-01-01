@@ -30,7 +30,7 @@ export const ContentCard = (props: ContentCardProps) => {
   return (
     <li>
       <div
-        className="flex items-center shadow-xl border border-gray-200 max-w-4xl mx-auto mb-12 bg-white rounded-md overflow-hidden dark:bg-zinc-900 dark:text-white dark:border-zinc-700"
+        className="flex items-center shadow-xl border border-gray-200 max-w-4xl mx-auto mb-12 bg-white rounded-md overflow-hidden dark:bg-zinc-900 dark:text-white dark:border-zinc-700 hover:scale-[1.01] focus:scale-[1.01] transition-transform"
         tabIndex={0}
       >
         <div className="relative h-96 w-1/3">
