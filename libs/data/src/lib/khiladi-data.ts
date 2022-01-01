@@ -8,6 +8,9 @@ export const KhiladiData: IData = {
     default: 'https://bit.ly/3zgJlOM',
     social: 'https://bit.ly/3eGRQti',
   },
+  seoTitle: 'Khiladi Franchise | Watch Guide',
+  seoDescription:
+    'Watch Guide is a website for Khiladi fans to find the best order to watch all the movies in Khiladi Franchise.',
   content: [
     {
       title: 'Khiladi',

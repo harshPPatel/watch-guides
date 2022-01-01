@@ -8,4 +8,6 @@ export interface IData {
   shortLinks: IShortLinks;
   content: IContent[];
   referenceLinks?: IReferenceLink[];
+  seoTitle: string;
+  seoDescription: string;
 }

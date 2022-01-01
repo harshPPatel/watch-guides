@@ -1,9 +1,11 @@
 import { IContent, IData, KhiladiData } from '@watch-guides/data';
+import Head from 'next/head';
 import { useEffect, useState } from 'react';
 import { ContentList } from '../components/ContentList';
 import Header from '../components/Header';
 import { ReferenceLinks } from '../components/ReferenceLinks';
 import { SearchBox } from '../components/SearchBox';
+import KhiladiSeoImage from '../public/images/khiladi-hero.jpg';
 import KhiladiLogo from '../public/images/khiladi-logo.png';
 
 export function Index(props: IData) {
@@ -23,6 +25,24 @@ export function Index(props: IData) {
 
   return (
     <div className="bg-gray-50 dark:bg-zinc-800">
+      <Head>
+        <title>{props.seoTitle}</title>
+        <meta name="description" content={props.seoDescription} />
+        <meta property="og:title" content={props.seoTitle} key="ogtitle" />
+        <meta
+          property="og:description"
+          content={props.seoDescription}
+          key="ogdesc"
+        />
+        <meta
+          property="og:url"
+          content="https://khiladi.watchguides.info"
+          key="ogurl"
+        />
+        <meta property="og:image" content={KhiladiSeoImage.src} key="ogimage" />
+        <meta name="twitter:card" content="summary" key="twcard" />
+        <meta name="twitter:creator" content="harsh_p_patel" key="twhandle" />
+      </Head>
       <Header
         title={props.title}
         description={props.description}
