@@ -8,7 +8,7 @@ interface FooterProps {
 }
 
 export const Footer = (props: FooterProps) => (
-  <footer className="bg-zinc-900 text-white mt-20 py-8">
+  <footer className="bg-zinc-900 text-white py-8">
     <div className="container mx-auto ">
       <nav className="h-24 flex items-center justify-between">
         <Link href="/" passHref>

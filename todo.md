@@ -3,10 +3,10 @@
 - [x] Add footer
 - [x] Refactor the code for Main section
 - [x] Add search function
-- [ ] Add Share dialogue?
-  - [ ] Make it easier to share the page
-  - [ ] manually create short link
-- [ ] Dark Mode
+- [x] Add Share dialogue?
+  - [x] Make it easier to share the page
+  - [x] manually create short link
+- [x] Dark Mode
 - [ ] Make website responsive
 - [ ] Make it SEO friendly
 - [ ] Add 404 page if needed (the default page should work just fine)

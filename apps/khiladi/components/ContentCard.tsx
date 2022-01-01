@@ -1,12 +1,11 @@
 import {
+  CalendarIcon,
   ClockIcon,
   CurrencyDollarIcon,
-  CalendarIcon,
 } from '@heroicons/react/outline';
 import { IContent } from '@watch-guides/data';
 import Image from 'next/image';
 import Link from 'next/link';
-import { content } from '../tailwind.config';
 import { ContentTypeTag } from './ContentTypeTag';
 import { ImdbLogo } from './logos/ImdbLogo';
 import { TmdbLogo } from './logos/TmdbLogo';
@@ -31,7 +30,7 @@ export const ContentCard = (props: ContentCardProps) => {
   return (
     <li>
       <div
-        className="flex items-center shadow-xl border-gray-200 max-w-4xl mx-auto mb-12 bg-white"
+        className="flex items-center shadow-xl border border-gray-200 max-w-4xl mx-auto mb-12 bg-white rounded-md overflow-hidden dark:bg-zinc-900 dark:text-white dark:border-zinc-700"
         tabIndex={0}
       >
         <div className="relative h-96 w-1/3">
@@ -51,26 +50,26 @@ export const ContentCard = (props: ContentCardProps) => {
 
           <div className="flex items-center">
             <p className="flex items-center text-sm font-light mr-6">
-              <span className="text-primary opacity-60 h-5 inline-block mr-1.5">
+              <span className="text-primary dark:text-rose-500 opacity-60 h-5 inline-block mr-1.5">
                 <ClockIcon className="h-full" />
               </span>
               {props.content.length}
             </p>
             <p className="flex items-center text-sm font-light mr-6">
-              <span className="text-primary opacity-60 h-5 inline-block mr-1.5">
+              <span className="text-primary dark:text-rose-500 opacity-60 h-5 inline-block mr-1.5">
                 <CurrencyDollarIcon className="h-full" />
               </span>
               {props.content.revenue ? `$ ${props.content.revenue}` : 'N/A'}
             </p>
             <p className="flex items-center text-sm font-light">
-              <span className="text-primary opacity-60 h-5 inline-block mr-1.5">
+              <span className="text-primary dark:text-rose-500 opacity-60 h-5 inline-block mr-1.5">
                 <CalendarIcon className="h-full" />
               </span>
               {props.content.releaseDate}
             </p>
           </div>
 
-          <p className="mt-5 mb-7 font-light text-gray-600">
+          <p className="mt-5 mb-7 font-light text-gray-600 dark:text-white/70">
             {props.content.description.length > 300
               ? props.content.description.slice(0, 300) + '...'
               : props.content.description}

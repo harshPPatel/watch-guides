@@ -22,14 +22,14 @@ export function Index(props: IData) {
   };
 
   return (
-    <div className="bg-gray-50">
+    <div className="bg-gray-50 dark:bg-zinc-800">
       <Header
         title={props.title}
         description={props.description}
         shortLinks={props.shortLinks}
         logo={KhiladiLogo}
       />
-      <div className="container mx-auto -mt-16">
+      <div className="container mx-auto -mt-16 pb-16">
         <div className="flex items-center justify-end mb-20">
           <SearchBox onInputHandler={handleOnInput} />
         </div>

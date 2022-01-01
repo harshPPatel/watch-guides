@@ -9,6 +9,7 @@ module.exports = {
     join(__dirname, 'pages/**/*.{ts,tsx}'),
     join(__dirname, 'components/**/*.{ts,tsx}'),
   ],
+  darkMode: 'media',
   theme: {
     extend: {
       fontFamily: {
